@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>60-Day C# Desktop Development Roadmap</title>
+<style>
+ body { font-family: Arial, sans-serif; background: #0d1117; color: #c9d1d9; margin: 0; }
+ header { background: #161b22; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid #30363d; }
+ nav a { color: #58a6ff; margin: 0 10px; text-decoration: none; font-weight: bold; }
+ nav a:hover { text-decoration: underline; }
+ .container { padding: 20px; }
+ .day-block { background: #161b22; padding: 15px; margin-bottom: 12px; border-radius: 10px; border: 1px solid #30363d; transition: transform .2s; }
+ .day-block:hover { transform: scale(1.02); }
+ strong { color: #79c0ff; }
+ .section-title { font-size: 22px; margin-top: 40px; color: #58a6ff; }
+ .checkbox { float:right; transform: scale(1.4); }
+ @media print {
+   header, nav { display: none; }
+   body { background: white; color: black; }
+   .day-block { border: 1px solid #000; }
+ }
+</style>
+<script>
+window.onload = () => {
+    document.querySelectorAll('.checkbox').forEach(box => {
+        const key = box.dataset.day;
+        const saved = localStorage.getItem("day_" + key);
+        if(saved === "true") box.checked = true;
+
+        box.onchange = () => {
+            localStorage.setItem("day_" + key, box.checked);
+        };
+    });
+};
+</script>
+</head>
+<body>
+<header>
+   <h1>60-Day C# Desktop Development Roadmap</h1>
+   <nav>
+     <a href="#d1">Day 1–10</a>
+     <a href="#d11">Day 11–20</a>
+     <a href="#d21">Day 21–30</a>
+     <a href="#d31">Day 31–40</a>
+     <a href="#d41">Day 41–50</a>
+     <a href="#d51">Day 51–60</a>
+   </nav>
+</header>
+<div class="container">
+
+<!-- Sections -->
+<h2 id="d1" class="section-title">Day 1–10</h2>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="1"><strong>Day 1:</strong> Install .NET SDK + Visual Studio.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="2"><strong>Day 2:</strong> First console app.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="3"><strong>Day 3:</strong> Variables and types.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="4"><strong>Day 4:</strong> Conditionals.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="5"><strong>Day 5:</strong> Loops.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="6"><strong>Day 6:</strong> Arrays and strings.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="7"><strong>Day 7:</strong> Methods.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="8"><strong>Day 8:</strong> Classes.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="9"><strong>Day 9:</strong> Inheritance.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="10"><strong>Day 10:</strong> Polymorphism.</div>
+
+<h2 id="d11" class="section-title">Day 11–20</h2>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="11"><strong>Day 11:</strong> Interfaces.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="12"><strong>Day 12:</strong> Abstract classes.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="13"><strong>Day 13:</strong> Properties & encapsulation.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="14"><strong>Day 14:</strong> OOP mini-project.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="15"><strong>Day 15:</strong> Collections.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="16"><strong>Day 16:</strong> LINQ basics.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="17"><strong>Day 17:</strong> LINQ advanced.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="18"><strong>Day 18:</strong> LINQ exercises.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="19"><strong>Day 19:</strong> Exception handling.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="20"><strong>Day 20:</strong> Debugging.</div>
+
+<h2 id="d21" class="section-title">Day 21–30</h2>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="21"><strong>Day 21:</strong> WinForms vs WPF.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="22"><strong>Day 22:</strong> First WinForms app.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="23"><strong>Day 23:</strong> Controls.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="24"><strong>Day 24:</strong> Events.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="25"><strong>Day 25:</strong> Calculator UI.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="26"><strong>Day 26:</strong> Dialogs & panels.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="27"><strong>Day 27:</strong> Note-taking app.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="28"><strong>Day 28:</strong> File IO in GUI.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="29"><strong>Day 29:</strong> Settings via JSON.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="30"><strong>Day 30:</strong> Mid project.</div>
+
+<h2 id="d31" class="section-title">Day 31–40</h2>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="31"><strong>Day 31:</strong> Start WPF.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="32"><strong>Day 32:</strong> Layouts.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="33"><strong>Day 33:</strong> Styles/templates.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="34"><strong>Day 34:</strong> Data binding.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="35"><strong>Day 35:</strong> MVVM basics.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="36"><strong>Day 36:</strong> Commands.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="37"><strong>Day 37:</strong> Data grids.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="38"><strong>Day 38:</strong> Contact manager.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="39"><strong>Day 39:</strong> Themes.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="40"><strong>Day 40:</strong> Animations.</div>
+
+<h2 id="d41" class="section-title">Day 41–50</h2>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="41"><strong>Day 41:</strong> SQL basics.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="42"><strong>Day 42:</strong> SQLite with C#.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="43"><strong>Day 43:</strong> EF Core.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="44"><strong>Day 44:</strong> EF migrations</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="45"><strong>Day 45:</strong> DB in WPF app.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="46"><strong>Day 46:</strong> async/await.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="47"><strong>Day 47:</strong> Multithreading.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="48"><strong>Day 48:</strong> API app.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="49"><strong>Day 49:</strong> Logging.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="50"><strong>Day 50:</strong> Refactoring.</div>
+
+<h2 id="d51" class="section-title">Day 51–60</h2>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="51"><strong>Day 51:</strong> Plan project.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="52"><strong>Day 52:</strong> Build UI.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="53"><strong>Day 53:</strong> Structure pages.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="54"><strong>Day 54:</strong> Logic implementation.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="55"><strong>Day 55:</strong> Add database.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="56"><strong>Day 56:</strong> Add themes.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="57"><strong>Day 57:</strong> Logging.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="58"><strong>Day 58:</strong> Testing.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="59"><strong>Day 59:</strong> Polish & finalize.</div>
+<div class="day-block"><input type="checkbox" class="checkbox" data-day="60"><strong>Day 60:</strong> Publish & GitHub.</div>
+
+</div>
+</body>
+</html>
